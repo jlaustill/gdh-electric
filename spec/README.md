@@ -33,7 +33,8 @@ Each module lives at `modules/<name>/<version>/`. The name is stable; each fabri
 Every module version folder contains:
 - `BOM.csv` — bill of materials
 - `PickAndPlace.csv` — component placement
-- `Schematic.pdf` — human-readable schematic
+- `Schematic.svg` — human-readable schematic (primary; renders in-browser on GitHub, diff-friendly)
+- `Schematic.pdf` — schematic for print/offline, generated *from* `Schematic.svg`
 - `Gerber.zip` — fabrication outputs
 - `datasheets/` — one datasheet per orderable part
 

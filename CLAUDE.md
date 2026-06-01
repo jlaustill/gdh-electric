@@ -10,6 +10,7 @@ Each module lives in `modules/<name>/<version>/` with EasyEDA outputs
 ## EasyEDA export quirk
 - `BOM.csv` / `PickAndPlace.csv` export as **UTF-16LE, tab-delimited**, unquoted header, double-quoted data fields.
 - Convert to UTF-8 before editing: `iconv -f UTF-16 -t UTF-8 file.csv`
+- EasyEDA's **PDF** schematic export is low-fidelity (mangled/overlapping labels). Export **SVG** instead (primary artifact — crisp, renders in-browser on GitHub), then generate the PDF from it: `inkscape Schematic.svg --export-type=pdf --export-filename=Schematic.pdf` (or `cairosvg`).
 
 ## BOM / PickAndPlace conventions
 - Exclude `CASTELLATED_PAD` rows — board-edge copper, not orderable/placeable parts.
