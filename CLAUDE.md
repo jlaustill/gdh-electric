@@ -31,7 +31,13 @@ Each module lives in `modules/<name>/<version>/` with EasyEDA outputs
   (The `/wmsc/product/detail` path 404s — use `/ftps/wm/product/detail`; a browser User-Agent is required.)
 - Naming: `<ManufacturerPart>_<LCSCcode>.pdf`, with `/` → `-`.
 - When LCSC `pdfUrl` is empty, fall back to the manufacturer (e.g. Kyocera AVX: `https://spicat.kyocera-avx.com/datasheet/<part>`). Microchip 403s automated requests.
+- Extract spec tables with `pdftotext -layout file.pdf -` (the `-layout` flag preserves columns — plain pdftotext scrambles tables).
+- Manufacturer sites (Bosch, ST, NGK/NTK, ersaelectronics, vendor wikis) often 403 WebFetch and even curl; retry with a browser UA, and if still blocked ask the user to download the PDF manually.
 - Verify each download: header is `%PDF`, and `pdftotext -l 2 file.pdf -` contains the part number.
 
 ## Git
 - `.claude/settings.local.json` is gitignored. Remote: `github.com/jlaustill/gdh-electric` (public).
+
+## Researching external designs
+- GDH modules often ruggedize proven open-source designs rather than start from scratch — search for permissively-licensed prior art first; GDH's value-add is ruggedness/form-factor, not novel circuitry.
+- Inspect an external repo without cloning: `gh api repos/<o>/<r>/git/trees/HEAD?recursive=1 --jq '.tree[].path'` for the file list, `gh api repos/<o>/<r>/contents/<path> --jq '.content' | base64 -d` to read a file, `gh api repos/<o>/<r>/license --jq .license.spdx_id` for the license.
