@@ -128,7 +128,7 @@ Meets the −40/+125 °C floor (ambient). Castellated / hand-solderable LQFP. CC
 
 ## 10. Sources (primary)
 
-- STM32H725xE/G datasheet **DS13311** — saved in-repo: `docs/superpowers/specs/datasheets/STM32H725RGV3_C5271074.pdf` (273 pp). Verified from its ordering tables: 8 packages incl. VFQFPN-68 (8×8 mm, 0.4 mm) & WLCSP-115, **no LQFP-64**; temp legend `3 = −40/+125 °C ambient`, `6 = −40/+85 °C`; pin codes R=68 / V=100·115 / Z=144; package codes T=LQFP / V=VFQFPN / Y=WLCSP.
+- STM32H725xE/G datasheet **DS13311** — saved in-repo: `modules/mcu-stm32h725/v0.0.1/datasheets/STM32H725RGV3_C5271074.pdf` (273 pp). Verified from its ordering tables: 8 packages incl. VFQFPN-68 (8×8 mm, 0.4 mm) & WLCSP-115, **no LQFP-64**; temp legend `3 = −40/+125 °C ambient`, `6 = −40/+85 °C`; pin codes R=68 / V=100·115 / Z=144; package codes T=LQFP / V=VFQFPN / Y=WLCSP.
 - Orderable & verified in stock: **STM32H725RGV3** (VFQFPN-68, +125 °C) — LCSC **C5271074**.
 - STM32H723 datasheet **DS13313** (suffix-6 = +85 °C ambient — the non-compliant value SKU).
 - CMSIS-SVD: `github.com/Open-CMSIS-Pack/STM32H7xx_DFP` → `CMSIS/SVD/STM32H725.svd`.
