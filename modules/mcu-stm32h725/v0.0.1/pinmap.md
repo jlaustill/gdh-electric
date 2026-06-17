@@ -20,18 +20,20 @@
 
 `68 total ≈ 46 GPIO + ~22 power/special` — the H7 is power-pin-hungry: multiple VDD/VSS, VCAP (core LDO), VDDA/VSSA/VREF+, VBAT, VDD33USB, VDDLDO, SMPS trio (VDDSMPS/VLXSMPS/VFBSMPS), PDR_ON, NRST, BOOT0.
 
-## Proposed castellation allocation (54 pads)
+## Castellation pinout — RAW pin names, no aliasing (design decision)
 
-| Group | Pads | Notes |
+**Every castellation is silkscreened with its native STM32 pin name (`PA8`, `PB3`, …) — NOT Arduino-style sequential numbers and NOT a single fixed function.** The board exposes the silicon; the integrator reads the DS13311 alternate-function table and chooses what each pin does (UART/SPI/I2C/ADC/FDCAN/timer/…). Rationale: transparency + no abstraction lock-in — the Teensy frustration of "only CAN1 is labeled, reverse-engineer the rest from registers" is designed out here: *all* CAN-capable pins are exposed by name and the integrator picks. So functions are **not** pre-assigned (e.g. FDCAN3 = PB3/PB4 **or** PA8/PA15 — both exposed, user decides).
+
+### 54-pad budget
+44 GPIO (all bonded I/O except PH0/PH1 = HSE crystal) + 3×3V3 + 4×GND + 1×Vin + 1×NRST + 1×BOOT0.
+GPIO: PA0–PA15 (16), PB0–PB10 + PB12–PB15 (15), PC0/PC1/PC4–PC7/PC9–PC12/PC14/PC15 (12), PD2 (1).
+
+### FDCAN-capable pins (reference for integrators; NOT pre-wired)
+| Bus | RX (bonded) | TX (bonded) |
 |---|---|---|
-| GPIO (broken out) | **44** | all bonded GPIO except PH0/PH1 (crystal); includes USB D±, SWD, 3× CAN pairs |
-| 3V3 + GND pairs | 6 | **3 distributed [3V3][GND] power pairs** (balanced taps along the edges) |
-| Vin + GND | 2 | 5 V power-in pair (input + return) |
-| NRST | 1 | |
-| BOOT0 | 1 | DFU entry |
-| **Total** | **54** | net: 3V3 ×3, GND ×4, Vin ×1, NRST ×1, BOOT0 ×1, GPIO ×44 |
-
-*Crystal-less alternative: frees PH0/PH1 → 46 GPIO, but narrows CAN-FD timing margin. Not recommended for a 3×CAN board.*
+| FDCAN1 | PB8 *(or PA11=USB)* | PB9 *(or PA12=USB)* |
+| FDCAN2 | PB12, PB5 | PB13, PB6 |
+| FDCAN3 | PB3, PA8 | PB4, PA15 |
 
 ## Fixed-function pins (from datasheet pin-definition + AF tables, DS13311)
 
@@ -40,13 +42,16 @@
 - **HSE:** PH0 (OSC_IN), PH1 (OSC_OUT)
 - **3× FDCAN:** FDCAN1 (4 pin-pair options), FDCAN2 (2), FDCAN3 (3) per the datasheet AF map — choose from the VFQFPN-68 pinout / AF table.
 
-## Proposed edge arrangement (principles; exact pins from datasheet)
+## Proposed edge order (27/side, PORT-grouped so any CAN pair lands adjacent — tweakable)
 
-- **USB-C** connector on one short end; route **PA11/PA12** to it *and* to their castellations (one USB, both places).
-- **Power** pads at predictable corners/ends: Vin, 3V3, GND.
-- **Debug cluster** grouped (SWDIO, SWCLK, NRST, BOOT0, GND) so a standard pogo/header footprint hits them.
-- **3× CAN** TX/RX pairs grouped, so each routes cleanly to a transceiver/carrier (e.g. `crd-mcp2562`).
-- **3V3+GND pairs** distributed ~every 9 pads (balanced power taps); remaining GPIO fill, ADC-capable pins kept on a contiguous run where possible.
+**Side A (USB-C end →):** `VIN GND PA0 PA1 PA2 PA3 PA4 PA5 PA6 PA7 3V3 GND PA8 PA9 PA10 PA11 PA12 PA13 PA14 PA15 3V3 GND PC0 PC1 PC4 PC5 NRST`
+
+**Side B:** `BOOT0 GND PB0 PB1 PB2 PB3 PB4 PB5 PB6 PB7 PB8 PB9 PB10 3V3 PB12 PB13 PB14 PB15 PC6 PC7 PC9 PC10 PC11 PC12 PC14 PC15 PD2`
+
+- PA11/PA12 also wire to the USB-C (D−/D+); PA13/PA14 = SWD — each still reaches its castellation (one signal, both places).
+- Silk = raw pin name; the *net* may carry a functional name (USB_DM/DP, SWDIO/SWCLK) but the pad **label** is the pin name.
+- Port-grouped means every FDCAN pair (PB8/9, PB12/13, PB3/4, PB5/6) is physically adjacent → clean transceiver/carrier routing.
+- ADC-capable pins (PA0–PA7, PB0/PB1, PC0–PC5) sit on contiguous runs.
 
 ## Next steps
 
