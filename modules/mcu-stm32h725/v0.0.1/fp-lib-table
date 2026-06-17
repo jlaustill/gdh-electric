@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "mcu-stm32h725")(type "KiCad")(uri "${KIPRJMOD}/kicad/mcu-stm32h725.pretty")(options "")(descr "GDH mcu-stm32h725 footprints (easyeda2kicad, from LCSC)"))
+)

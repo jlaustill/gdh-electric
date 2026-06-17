@@ -1,0 +1,28 @@
+{
+  "board": {},
+  "boards": [],
+  "cvpcb": {
+    "equivalence_files": []
+  },
+  "libraries": {
+    "pinned_footprint_libs": [
+      "mcu-stm32h725"
+    ],
+    "pinned_symbol_libs": [
+      "mcu-stm32h725"
+    ]
+  },
+  "meta": {
+    "filename": "mcu-stm32h725.kicad_pro",
+    "version": 1
+  },
+  "net_settings": {
+    "classes": []
+  },
+  "pcbnew": {
+    "page_layout_descr_file": ""
+  },
+  "schematic": {},
+  "sheets": [],
+  "text_variables": {}
+}
