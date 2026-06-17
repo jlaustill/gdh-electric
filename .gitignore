@@ -4,3 +4,10 @@
 # OS cruft
 .DS_Store
 Thumbs.db
+
+# KiCad transient/local files
+*.kicad_prl
+*-backups/
+*.lck
+~*.kicad_*
+fp-info-cache
