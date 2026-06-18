@@ -14,3 +14,4 @@ fp-info-cache
 *.bak
 *.rpt
 report.txt
+*.bak*
