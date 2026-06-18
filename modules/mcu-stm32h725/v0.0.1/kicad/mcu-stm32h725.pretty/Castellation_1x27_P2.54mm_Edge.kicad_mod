@@ -35,7 +35,7 @@
     (at 0 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "b6c54570-7681-4a2e-a35f-5a61b0d71b32")
   )
 
@@ -43,7 +43,7 @@
     (at 2.54 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "11979d5e-9c57-49d2-967e-867a1cd301e1")
   )
 
@@ -51,7 +51,7 @@
     (at 5.08 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "41b94788-d0ef-4062-b64e-837b2065b48d")
   )
 
@@ -59,7 +59,7 @@
     (at 7.62 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "1fcf6fa2-ed1e-4075-bc6e-7f714fa1c81e")
   )
 
@@ -67,7 +67,7 @@
     (at 10.16 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "f9396c41-9c94-423e-9e7b-668b35c0b67b")
   )
 
@@ -75,7 +75,7 @@
     (at 12.7 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "8d76bd17-6f6a-47ac-8ab9-23e49a663caa")
   )
 
@@ -83,7 +83,7 @@
     (at 15.24 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "08db86fd-9607-4c6c-b09c-2dd50020c779")
   )
 
@@ -91,7 +91,7 @@
     (at 17.78 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "2fb4586b-851b-4b30-b251-29d0c6a317f8")
   )
 
@@ -99,7 +99,7 @@
     (at 20.32 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "4512ced3-2ab6-4403-84a3-8aae845cb1b1")
   )
 
@@ -107,7 +107,7 @@
     (at 22.86 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "8d800e17-0262-41ce-b7cd-df694cf36ade")
   )
 
@@ -115,7 +115,7 @@
     (at 25.4 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "e2dc7e0e-6bd8-4db4-b071-5d5c4f5b9231")
   )
 
@@ -123,7 +123,7 @@
     (at 27.94 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "6a72b30d-b56c-4ca4-807d-cae7a99ceadd")
   )
 
@@ -131,7 +131,7 @@
     (at 30.48 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "18658c20-da3c-4c17-9f2a-3aff52934377")
   )
 
@@ -139,7 +139,7 @@
     (at 33.02 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "be318900-1ea7-46a1-8a9b-baa92aec57c8")
   )
 
@@ -147,7 +147,7 @@
     (at 35.56 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "af509bfc-fb55-4683-8e12-671a20c550c8")
   )
 
@@ -155,7 +155,7 @@
     (at 38.1 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "44e73511-78a6-4d4b-8073-43b326169118")
   )
 
@@ -163,7 +163,7 @@
     (at 40.64 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "d5cf8c62-4f56-4ee3-84e8-79f2976a1bc4")
   )
 
@@ -171,7 +171,7 @@
     (at 43.18 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "6c151e13-e26c-4088-99fd-0e76389c5b36")
   )
 
@@ -179,7 +179,7 @@
     (at 45.72 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "200cd2dd-0953-46f5-80dc-ac9d8242e8fb")
   )
 
@@ -187,7 +187,7 @@
     (at 48.26 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "0694b771-17e1-4070-8161-b7db46729915")
   )
 
@@ -195,7 +195,7 @@
     (at 50.8 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "d09d02dd-8e22-47d5-a1ff-008108bb40b5")
   )
 
@@ -203,7 +203,7 @@
     (at 53.34 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "2ac09bea-7473-4f92-ba6e-e9e19eeb8991")
   )
 
@@ -211,7 +211,7 @@
     (at 55.88 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "bfe979c8-e2d8-46c8-a98b-07f38760f7c7")
   )
 
@@ -219,7 +219,7 @@
     (at 58.42 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "6ade270b-3d26-4e57-8bee-91c2fba2ccd6")
   )
 
@@ -227,7 +227,7 @@
     (at 60.96 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "38330e4e-c849-47b3-92ff-bac039a79ef7")
   )
 
@@ -235,7 +235,7 @@
     (at 63.5 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "f7e8a250-a4b1-4d76-b9c9-f3bb091503a0")
   )
 
@@ -243,7 +243,7 @@
     (at 66.04 0)
     (size 1.6 1.6)
     (drill 1)
-    (layers "*.Cu" "*.Mask")
+    (layers "*.Cu" "*.Mask") (property pad_prop_castellated)
     (uuid "8053cd85-2639-4675-b292-0b27e69df6ba")
   )
 

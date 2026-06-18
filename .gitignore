@@ -12,3 +12,5 @@ Thumbs.db
 ~*.kicad_*
 fp-info-cache
 *.bak
+*.rpt
+report.txt
