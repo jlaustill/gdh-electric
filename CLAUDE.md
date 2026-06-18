@@ -6,6 +6,12 @@ Each module lives in `modules/<name>/<version>/` with EasyEDA outputs
 
 **Read `spec/README.md`** (the living spec) before designing or changing a module — it holds the design doctrine (anti-landfill; minimal rugged **module** + stackable **carrier** boards; decide on-module vs carrier by *"will a future integrator be forced to supply it, or is it silently omittable?"*) and the module conformance rules.
 
+## KiCad modules — `mcu-stm32h725` (exception: this module is KiCad 9, not EasyEDA)
+- Fabbed by JLCPCB → every part needs an LCSC code. Generate parts: `easyeda2kicad --full --lcsc_id=C<code> --output <dir>` (symbol+footprint+3D from LCSC's verified geometry).
+- **Castellated SMT module → B.Cu must stay component-free** (reflows flat onto a carrier): all parts top-side only; B.Cu *routing* is fine. Mark castellation pads `(property pad_prop_castellated)` to clear edge-clearance DRC.
+- **KiCad MCP (mixelpixx) board writes/saves are unreliable** → edit `.kicad_pcb` directly (Python/sexp) with pcbnew CLOSED; back up first, match the EXACT coord string, verify `(`/`)` balance after.
+- Schematic edits via MCP work but are file-based → eeschema CLOSED, close→reopen to view. pcbnew **caches the schematic at open** → close+reopen before F8 after any `.kicad_sch` edit; F8 **re-annotates refs** (board ≠ schematic).
+
 ## Licensing
 - Design files are dedicated to the public domain under **CC0 1.0** (right-to-repair / perpetual-value philosophy). Default new modules to CC0.
 
