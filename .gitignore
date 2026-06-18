@@ -11,3 +11,4 @@ Thumbs.db
 *.lck
 ~*.kicad_*
 fp-info-cache
+*.bak
