@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "mcu-imxrt1062")(type "KiCad")(uri "${KIPRJMOD}/kicad/mcu-imxrt1062.kicad_sym")(options "")(descr "GDH mcu-imxrt1062 symbols (easyeda2kicad, from LCSC)"))
+)

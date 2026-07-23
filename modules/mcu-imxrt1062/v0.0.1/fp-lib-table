@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "mcu-imxrt1062")(type "KiCad")(uri "${KIPRJMOD}/kicad/mcu-imxrt1062.pretty")(options "")(descr "GDH mcu-imxrt1062 footprints (easyeda2kicad, from LCSC)"))
+)
